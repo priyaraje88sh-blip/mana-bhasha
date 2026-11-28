@@ -1,0 +1,58 @@
+@font-face{font-family:"Noto Sans Telugu";font-weight:400;font-display:swap;src:url(fonts/noto-sans-telugu-telugu-400-normal.woff2) format("woff2");unicode-range:U+0951-0952,U+0964-0965,U+0C00-0C7F,U+1CDA,U+1CF2,U+200C-200D,U+25CC}
+@font-face{font-family:"Noto Sans Telugu";font-weight:700;font-display:swap;src:url(fonts/noto-sans-telugu-telugu-700-normal.woff2) format("woff2");unicode-range:U+0951-0952,U+0964-0965,U+0C00-0C7F,U+1CDA,U+1CF2,U+200C-200D,U+25CC}
+@font-face{font-family:"Noto Sans Telugu";font-weight:400;font-display:swap;src:url(fonts/noto-sans-telugu-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF}
+@font-face{font-family:"Noto Sans Telugu";font-weight:700;font-display:swap;src:url(fonts/noto-sans-telugu-latin-700-normal.woff2) format("woff2");unicode-range:U+0000-00FF}
+
+:root{--bg:#fff8ef;--ink:#2b2140;--sun:#ff7a59;--leaf:#2bb673;--sky:#4d9de0;--grape:#8e5cd9;--card:#fff;--soft:#ffe9d6}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans Telugu",system-ui,sans-serif;-webkit-tap-highlight-color:transparent}
+.te{font-family:"Noto Sans Telugu",sans-serif}
+button{font:inherit;color:inherit;cursor:pointer}
+.top{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--sun);color:#fff;box-shadow:0 2px 8px #0002}
+.brand{flex:1;display:flex;flex-direction:column;line-height:1.1}
+.brand .te{font-size:22px;font-weight:700}
+.brand small{opacity:.85;font-size:12px}
+.back{background:#fff3;border:0;border-radius:12px;width:40px;height:40px;font-size:22px;color:#fff}
+.stars{background:#fff;color:var(--ink);border-radius:20px;padding:6px 12px;font-weight:700}
+main{max-width:720px;margin:0 auto;padding:16px}
+.hero h1{margin:6px 0 4px;font-size:26px}
+.hero p{margin:0 0 16px;opacity:.8}
+.levels{display:grid;gap:12px}
+.level{position:relative;padding-right:64px !important;display:grid;grid-template-columns:90px 1fr;grid-template-rows:auto auto;align-items:center;text-align:left;border:0;border-radius:20px;padding:14px;background:var(--card);box-shadow:0 3px 0 #0001,0 6px 16px #0000000d}
+.level .lv-te{grid-row:span 2;font-size:28px;font-weight:700;color:var(--sun);text-align:center}
+.level .lv-name{font-weight:700}
+.level .lv-meta{font-size:13px;opacity:.7}
+.level .tag{position:absolute;top:10px;right:12px;font-size:12px;font-weight:700;border-radius:10px;padding:2px 8px;background:#eee}
+.level .tag.free{background:var(--leaf);color:#fff}
+.level.locked{opacity:.55}
+.tip{margin:18px 0;padding:14px;border-radius:16px;background:#e8f4ff;border-left:6px solid var(--sky);font-size:14px}
+.tip b{display:block;margin-bottom:4px}
+.foot{font-size:12px;opacity:.6;text-align:center;margin:20px 0}
+
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.letter{aspect-ratio:1;border:0;border-radius:18px;background:var(--card);font-size:40px;font-weight:700;box-shadow:0 3px 0 #0001,0 6px 14px #0000000d;position:relative}
+.letter:nth-child(4n+1){color:var(--sun)}.letter:nth-child(4n+2){color:var(--sky)}.letter:nth-child(4n+3){color:var(--leaf)}.letter:nth-child(4n){color:var(--grape)}
+.letter.done::after{content:"⭐";position:absolute;top:4px;right:6px;font-size:14px}
+h2{margin:4px 0 12px}
+
+.card{background:var(--card);border-radius:24px;padding:18px;text-align:center;box-shadow:0 6px 20px #0000001a}
+.big{font-size:120px;font-weight:700;line-height:1.2;color:var(--sun)}
+.say{font-size:18px;margin:2px 0 12px}
+.say b{color:var(--grape)}
+.pic{font-size:72px;line-height:1.1}
+.word{font-size:34px;font-weight:700;margin:4px 0 0}
+.word-en{opacity:.7;margin-bottom:6px}
+.row{display:flex;gap:10px;justify-content:center;margin-top:14px;flex-wrap:wrap}
+.btn{border:0;border-radius:16px;padding:12px 18px;font-weight:700;background:var(--soft)}
+.btn.go{background:var(--leaf);color:#fff}
+.btn:disabled{opacity:.5}
+.note{font-size:12px;opacity:.6;margin-top:8px}
+
+.q-pic{font-size:90px}
+.q-word{font-size:28px;font-weight:700}
+.choices{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+.choice{aspect-ratio:1;border:0;border-radius:20px;background:var(--card);font-size:54px;font-weight:700;box-shadow:0 3px 0 #0001,0 6px 14px #0000000d}
+.choice.right{background:var(--leaf);color:#fff}
+.choice.wrong{background:#ffd6d6;animation:shake .3s}
+@keyframes shake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.cheer{font-size:22px;font-weight:700;min-height:34px;margin-top:10px}
