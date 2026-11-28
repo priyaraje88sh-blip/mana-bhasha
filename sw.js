@@ -1,5 +1,5 @@
 // Offline cache for Mana Bhasha. Bump VERSION on every release.
-const VERSION = "mb-v3";
+const VERSION = "mb-v4";
 const CORE = ["./", "index.html", "css/app.css", "js/content-te.js", "js/app.js", "art/chitti.svg",
   "manifest.webmanifest", "icons/icon.svg", "icons/icon-192.png", "icons/icon-512.png", "audio/te/map.json",
   "fonts/noto-sans-telugu-telugu-400-normal.woff2", "fonts/noto-sans-telugu-telugu-700-normal.woff2",

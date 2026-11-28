@@ -331,7 +331,8 @@ function about() {
   app.innerHTML = `<h2>About Mana Bhasha</h2>
     <p>Mana Bhasha helps children and grown-ups living abroad learn their mother tongue at home. Telugu first — more Indian languages coming.</p>
     <div class="row"><button class="btn" data-who>🔁 Switch learner (child / grown-up)</button></div>
-    <p class="foot">Privacy: no account, no tracking, no child data. Progress is saved only in this browser.</p>`;
+    <p class="foot">Privacy: no account, no tracking, no child data. Progress is saved only in this browser.</p>
+    <p class="foot">Credits: Telugu voice made with Piper "padmavathi" (trained on AI4Bharat IndicVoices-R, CC BY 4.0). Font: Noto Sans Telugu (SIL Open Font License). Chitti and all artwork: Mana Bhasha.</p>`;
   $("[data-who]").onclick = () => { S.who = null; save(); go(""); };
 }
 
