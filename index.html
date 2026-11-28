@@ -3,58 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Mana Bhasha – Learn Telugu at home with your child</title>
-<meta name="description" content="Kids abroad learn Telugu at home, sitting next to Amma and Nanna. Letters, words, games and stars. Level 1 is free.">
+<title>Mana Bhasha – Learn Telugu at home</title>
+<meta name="description" content="Kids and grown-ups abroad learn Telugu at home: letters, words, speaking, songs and poems — with games, audio, tests and a certificate. First world free.">
 <meta name="theme-color" content="#ff7a59">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/app.css">
 </head>
 <body>
 <header class="top">
   <button class="back" id="back" aria-label="Back" hidden>←</button>
-  <div class="brand"><span class="te">మన భాష</span><small>Mana Bhasha</small></div>
-  <div class="stars" id="stars" aria-label="Stars earned">⭐ 0</div>
+  <div class="brand" id="brand"><span class="te">మన భాష</span><small>Mana Bhasha</small></div>
+  <div class="chips"><span class="chip" id="streak" title="Days in a row">🔥 0</span><span class="chip" id="stars" title="Stars">⭐ 0</span></div>
 </header>
-
-<main id="app"></main>
-
-<template id="t-home">
-  <section class="hero">
-    <h1>Hi! <span class="te">నమస్తే</span> 🙏</h1>
-    <p>Sit with your child and learn Telugu together — one letter at a time.</p>
-  </section>
-  <div class="levels">
-    <button class="level open" data-go="vowels">
-      <span class="lv-te te">అ ఆ ఇ</span>
-      <span class="lv-name">Level 1 · Vowels <span class="te">(అచ్చులు)</span></span>
-      <span class="lv-meta" id="vowel-progress">0 / 16 learned</span>
-      <span class="tag free">FREE</span>
-    </button>
-    <button class="level" data-go="game">
-      <span class="lv-te te">🎯</span>
-      <span class="lv-name">Game · Find the letter</span>
-      <span class="lv-meta">Earn ⭐ stars</span>
-      <span class="tag free">FREE</span>
-    </button>
-    <div class="level locked">
-      <span class="lv-te te">క ఖ గ</span>
-      <span class="lv-name">Level 2 · Consonants <span class="te">(హల్లులు)</span></span>
-      <span class="lv-meta">Coming soon</span>
-      <span class="tag">🔒</span>
-    </div>
-    <div class="level locked">
-      <span class="lv-te te">కా కి కీ</span>
-      <span class="lv-name">Level 3 · Guninthalu <span class="te">(గుణింతాలు)</span></span>
-      <span class="lv-meta">Coming soon</span>
-      <span class="tag">🔒</span>
-    </div>
-  </div>
-  <aside class="tip"><b>💡 Tip for Amma &amp; Nanna</b>10 minutes a day is enough. Say each letter out loud together, then let your child point and say it alone. Praise every try!</aside>
-  <footer class="foot">We never collect any data about your child. Progress stays only on this device.</footer>
-</template>
-
-<script src="app.js"></script>
+<main id="app" aria-live="polite"></main>
+<div id="fx" aria-hidden="true"></div>
+<script src="js/content-te.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
